@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO para o Google encontrar seu site -->
+    <title>BloxPulse | Atualizações de Roblox Mobile</title>
+    <meta name="description" content="Confira em tempo real as novidades e atualizações dos maiores jogos do Roblox direto no seu celular.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Ícones e Fontes (Leves) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-box"><i class="fa-solid fa-cube"></i></div>
+                Blox<span>Pulse</span>
+            </a>
+            <div class="live-indicator">
+                <div class="pulse-dot"></div>
+                LIVE
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <h1>Atualizações Roblox <span>Tempo Real</span></h1>
+        <p>Acompanhe patch notes e novidades dos maiores jogos do Roblox em uma tela feita para seu celular.</p>
+        
+        <div class="search-filter-container">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" id="searchInput" placeholder="Buscar jogo (ex: Blox Fruits)..." oninput="filterGames()">
+            </div>
+            <!-- Carrossel de categorias deslizante para o dedo no celular -->
+            <div class="categories-wrapper">
+                <nav class="categories-nav">
+                    <button class="category-btn active" onclick="filterCategory('todos', this)">Todos</button>
+                    <button class="category-btn" onclick="filterCategory('RPG', this)">RPG</button>
+                    <button class="category-btn" onclick="filterCategory('Simulador', this)">Simulador</button>
+                    <button class="category-btn" onclick="filterCategory('Esporte', this)">Esporte</button>
+                    <button class="category-btn" onclick="filterCategory('Social', this)">Social</button>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <main class="content-container">
+        <header class="section-header">
+            <h2>Feed de Notícias</h2>
+        </header>
+
+        <section class="updates-grid" id="updatesGrid">
+            <!-- Cards injetados pelo JS -->
+            <div class="no-results" id="noResults">
+                <i class="fa-solid fa-gamepad"></i>
+                <p>Nenhum jogo encontrado.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 <span>BloxPulse</span>. Fã-site de Roblox.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+  </html>
+  
